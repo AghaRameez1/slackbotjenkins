@@ -3,11 +3,11 @@ pipeline {
     stages{
      stage('Initialize'){
      steps {
-     sh '''
+     script{
         def dockerHome = tool 'myDocker'
+        echo "${readProp['dockerHome']}"
         env.PATH = "${dockerHome}/bin:${env.PATH}"
-        '''
-        }
+        }}
     }
      stage('build docker image'){
          steps{
