@@ -1,14 +1,6 @@
 pipeline {
     agent any
     stages{
-     stage('Initialize'){
-     steps {
-     script{
-        def dockerHome = tool 'myDocker'
-        echo "${readProp['dockerHome']}"
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-        }}
-    }
      stage('build docker image'){
          steps{
            sh '''
