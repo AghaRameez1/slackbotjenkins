@@ -16,6 +16,7 @@ pipeline {
                     sh 'aws s3 ls'
                 }
             }
+            }
 //         stage ('pushing to ecr'){
 //         steps{
 //         sh '''
