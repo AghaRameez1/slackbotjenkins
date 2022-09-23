@@ -17,8 +17,8 @@ pipeline {
 
                 script {
                     def images = ecrListImages(repositoryName: 'reactapp-hasnain')
-                    for (int i = 0; i < browsers.size(); ++i) {
-                        echo "${browsers[i]}"
+                    for (int i = 0; i < images.size(); ++i) {
+                        echo "${images[i]}"
                     }
                 }
             }
