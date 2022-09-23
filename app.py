@@ -397,7 +397,7 @@ def checkStatusofpipeline():
         print(e)
 
 
-@app.route('/docker', methods=['GET'])
+@app.route('/', methods=['GET'])
 def docker():
     print(os.environ)
     return make_response(jsonify(os.environ['GITHUB_TOKEN'],os.environ['SLACK_TOKEN'],os.environ['SIGNING_SECRET']),200)
