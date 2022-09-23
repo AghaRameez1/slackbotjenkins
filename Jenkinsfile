@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    environment{
+        aws_access_key_id = credentials('aws_access_key_id')
+        aws_secret_key = credentials('aws_secret_access_key')
+        aws_region = credentials('aws_region')
+    }
     stages{
      stage('build docker image'){
          steps{
