@@ -23,6 +23,7 @@ pipeline {
                 }
             }
             }
+        }
 //         stage ('pushing to ecr'){
 //         steps{
 //         sh '''
