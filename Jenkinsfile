@@ -13,7 +13,8 @@ pipeline {
         stage('aws_login') {
             steps {
                 withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
-                   ecrListImages
+                   def images = ecrListImages(repositoryName: 'reactapp-hasnain')
+                   echo "${images}"
                 }
             }
             }
