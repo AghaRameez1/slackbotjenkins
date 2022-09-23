@@ -38,7 +38,7 @@ pipeline {
         stage ('accessing cluster'){
         steps{
         sh '''
-        aws eks update-kubeconfig --region us-east-2 --name hasnain-jenkins
+        aws eks update-kubeconfig --region us-east-2 --name Hasnain-Jenkins
         kubectl apply -f manifest.yml
         echo kubectl get pods
 
